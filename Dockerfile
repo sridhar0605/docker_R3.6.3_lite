@@ -24,5 +24,5 @@ RUN apt-get update -y && apt-get install -y \
 
 # install R packages
 RUN R --vanilla -e 'install.packages(c("devtools", "BiocManager"), repos="http://cran.us.r-project.org")'
-RUN R --vanilla -e 'BiocManager::install(c("biomaRt", "fgsea", "DESeq2", "maser", "APAlyzer", "clusterProfiler"))'
+RUN R --vanilla -e 'BiocManager::install(c("biomaRt", "fgsea", "DESeq2", "maser", "RJWANGbioinfo/APAlyzer", "clusterProfiler"))'
 RUN R --vanilla -e 'install.packages(c("ggplot2", "data.table", "dplyr", "reshape2", "tidyr", "viridis", "cowplot", "ggalluvial", "msigdbr", "ggdendro", "gridExtra","tidyverse", "splitstackshape"), repos = "http://cran.us.r-project.org")'
